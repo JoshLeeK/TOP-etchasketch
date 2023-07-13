@@ -1,20 +1,19 @@
 const container = document.querySelector('#container');
-
-let gridbox = document.createElement('div');
-const p = document.querySelector('p');
 const resetbtn = document.getElementById('resetbtn');
-// const gridarray = [gridbox];
 
-gridbox.classList.add('gridboxstyle');
+// Functions
 
-
+// Function to add color on hover
 function hover(){
     this.classList.add('hovercolor');
 }
+
+// Function to remove color
 function removecolor(){
     this.classList.add('hovercolor');
 }
 
+// Function to reset grid by calling remove function on grid
 function reset () {
     gridstoreset = resetgrid;
     gridstoreset.forEach((element) => {
@@ -22,7 +21,7 @@ function reset () {
       });
 }
 
-
+// Function to make iniital grid and add hover function to each square.
 function gridmaker(){
         for (let i = 0; i < 256; i++) {
             let gridbox = document.createElement('div');
@@ -34,8 +33,8 @@ function gridmaker(){
                 }
 
 
+// Logic loaded
+
 gridmaker()
 const resetgrid = document.querySelectorAll('div');
-console.log(resetgrid);
-
 resetbtn.addEventListener('click', reset);
