@@ -3,10 +3,18 @@ const resetbtn = document.getElementById('resetbtn');
 
 // Functions
 
+
+function hover() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    this.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+  }
+
 // Function to add color on hover
-function hover(){
-    this.classList.add('hovercolor');
-}
+// function hover(){
+    // this.classList.add('hovercolor');
+// }
 
 // Function to remove color
 function removecolor(){
